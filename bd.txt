@@ -1,0 +1,8 @@
+Juan,2
+uaj,2
+maria,7
+promedio,3.6666666666666665
+max,7
+min,2
+mostreapeted,2
+lessreapeted,7
