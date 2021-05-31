@@ -1,10 +1,5 @@
 package GES;
 
-import GES.DAL.Repository;
-import GES.Entities.Student;
-
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +7,7 @@ public class RegistroAcademico {
 
     static boolean salir = false;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         RegistroAcademico r = new RegistroAcademico();
         r.iniciar();
@@ -36,7 +31,7 @@ public class RegistroAcademico {
     }
 
     private int mostrarMenu() {
-        int result = 0;
+        int result;
         System.out.println("Opciones:");
         System.out.println("----------------------");
 
