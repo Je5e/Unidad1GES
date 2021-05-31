@@ -18,26 +18,15 @@ public class GenerarEstadisticasOption extends Option {
 
         Repository repository = new Repository();
         List<Integer> notas = repository.getGrades();
-// Refactorizar este codigo.
-        double promedio = notas.stream().mapToDouble(d -> d)
-                .average()
-                .orElse(0.0);
-        int min = Collections.min(notas);
-        int max = Collections.max(notas);
 
-        Set<Integer> unique = new HashSet<>(notas);
-        int mostRepeated = 0;
-        int lessReapeted = 0;
-        HashMap<Integer, Integer> allFrecuencies = new HashMap<>();
-        for (Integer key : unique) {
-            int frecuency = Collections.frequency(notas, key);
-            allFrecuencies.put(frecuency, key);
-        }
-        List<Integer> keys = allFrecuencies.keySet().stream().toList();
-        int lr = Collections.min(keys);
-        int mr = Collections.max(keys);
-        mostRepeated = allFrecuencies.get(mr);
-        lessReapeted = allFrecuencies.get(lr);
+        // Refactorizar este codigo.
+        double promedio = StatisticManager.getAverageGrades(notas);
+
+        int min = StatisticManager.getMinGrade(notas);
+        int max = StatisticManager.getMaxGrade(notas);
+
+        int mostRepeated = StatisticManager.getMostRepeatedGrade(notas);
+        int lessReapeted = StatisticManager.getLessRepeatedGrade(notas);
 
         repository.registrarEstadisticas("promedio," + promedio + "\n");
         repository.registrarEstadisticas("max," + max + "\n");

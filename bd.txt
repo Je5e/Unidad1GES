@@ -1,8 +1,8 @@
-Juan,2
-uaj,2
-maria,7
-promedio,3.6666666666666665
-max,7
-min,2
-mostreapeted,2
-lessreapeted,7
+juan,8
+maria,8
+robert,6
+promedio,7.333333333333333
+max,8
+min,6
+mostreapeted,8
+lessreapeted,6
