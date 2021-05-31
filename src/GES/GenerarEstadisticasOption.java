@@ -27,7 +27,7 @@ public class GenerarEstadisticasOption extends Option {
 
         int mostRepeated = StatisticManager.getMostRepeatedGrade(notas);
         int lessReapeted = StatisticManager.getLessRepeatedGrade(notas);
-
+// Registrar en la base de datos las estadisticas generadas.
         repository.registrarEstadisticas("promedio," + promedio + "\n");
         repository.registrarEstadisticas("max," + max + "\n");
         repository.registrarEstadisticas("min," + min + "\n");

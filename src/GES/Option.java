@@ -1,7 +1,7 @@
 package GES;
 
 import java.io.IOException;
-
+// Representa una opcion en el sistema.
 public abstract class Option {
     private int code;
     private String description;

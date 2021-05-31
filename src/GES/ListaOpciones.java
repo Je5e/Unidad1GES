@@ -3,6 +3,7 @@ package GES;
 import java.util.ArrayList;
 import java.util.List;
 
+// Representa todas las opciones del sitemas.
 public class ListaOpciones {
     static List<Option> options;
 

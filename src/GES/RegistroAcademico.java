@@ -13,6 +13,7 @@ public class RegistroAcademico {
     static boolean salir = false;
 
     public static void main(String[] args) throws IOException {
+
         RegistroAcademico r = new RegistroAcademico();
         r.iniciar();
     }
@@ -46,9 +47,9 @@ public class RegistroAcademico {
         }
         Scanner sc = new Scanner(System.in);
 
-      System.out.print("Digite: ");
-      result = sc.nextInt();
+        System.out.print("Digite: ");
+        result = sc.nextInt();
 
-      return result;
+        return result;
     }
 }

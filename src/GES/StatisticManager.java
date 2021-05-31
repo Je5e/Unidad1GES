@@ -2,21 +2,24 @@ package GES;
 
 import java.util.*;
 
+// Representa la logica para generar las estadisticas.
 public class StatisticManager {
 
-    public static double getAverageGrades(List<Integer> datos){
+    public static double getAverageGrades(List<Integer> datos) {
         return datos.stream().mapToDouble(d -> d)
                 .average()
                 .orElse(0.0);
     }
-    public  static int getMinGrade(List<Integer> grades){
+
+    public static int getMinGrade(List<Integer> grades) {
         return Collections.min(grades);
     }
 
     public static int getMaxGrade(List<Integer> notas) {
         return Collections.max(notas);
     }
-    public static int getMostRepeatedGrade(List<Integer> grades){
+
+    public static int getMostRepeatedGrade(List<Integer> grades) {
         Set<Integer> unique = new HashSet<>(grades);
         int mostRepeated = 0;
         HashMap<Integer, Integer> allFrecuencies = new HashMap<>();
@@ -28,7 +31,7 @@ public class StatisticManager {
         // Obtener el key del diccionario, que mas se repite.
         int mr = Collections.max(keys);
         mostRepeated = allFrecuencies.get(mr);
-       return mostRepeated;
+        return mostRepeated;
     }
 
     public static int getLessRepeatedGrade(List<Integer> notas) {
